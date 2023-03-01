@@ -31,4 +31,5 @@ While choosing a metric for medical images with a prevalence problem, we pick re
 
  
 
-### Weighted Cross-entropy: This loss is used when the error in one direction is costlier than the other, for example, it is much more undesirable to diagnose 'effusion' as 'normal' than the other way around. This is done by assigning 'higher weights' to the errors in certain classes.
+### Weighted Cross-entropy: 
+This loss is used when the error in one direction is costlier than the other, for example, it is much more undesirable to diagnose 'effusion' as 'normal' than the other way around. This is done by assigning 'higher weights' to the errors in certain classes.
