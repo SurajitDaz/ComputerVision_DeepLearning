@@ -13,7 +13,7 @@ The dataset is taken from the Kaggle website and it consists of sentence-based i
  
 #Project Pipeline
 The broader pipelines which followed here is mentioned below. The major steps those are to be performed can be briefly summarized in the following four steps:
-•	Data Understanding: Here, we need to load the data and understand the representation.
+*	Data Understanding: Here, we need to load the data and understand the representation.
 •	Data Preprocessing: In this step, we will process both images and captions to the desired format.
 •	Train-Test Split: Combine both images and captions to create the train and test dataset.
 •	Model Building: This is the stage where we will create your image captioning model by building Encoder, Attention and Decoder model.
