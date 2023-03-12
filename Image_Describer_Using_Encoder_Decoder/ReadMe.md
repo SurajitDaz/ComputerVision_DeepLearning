@@ -91,4 +91,11 @@ Once the padding is done, we need to apply 'masking'. Through masking we need to
 
 In the next video, let's understand the whole process again and see how the evaluation process is different from training.
 
+### Greedy search vs Beam search: 
+Greedy search - This method calculates the probability of the words according to their occurrence in the English vocabulary. It takes the sample of the words, finds the probability of each of the words, and then outputs the word with the highest probability. This makes the computational speed of the model fast, but the accuracy might not be up to the mark.
+ Beam Search - The alternative for greedy search is beam search. In beam search, the model finds the k most likely words instead of selecting a single word and these k words are passed on to the next timestamp. It works on the breadth-first search algorithm.
  
+ BLEU Score is used as the evaluation metric for the predicted word. It determines the "difference" between the predicted sentence from the human-created sentence.
+
+We use the BLEU measure to evaluate the result of the test set generated captions. The BLEU is simply taking the fraction of n-grams in the predicted sentence that appears in the ground-truth.
+BLEU is a well-acknowledged metric to measure the similarity of one hypothesis sentence to multiple reference sentences. Given a single hypothesis sentence and multiple reference sentences, it returns a value between 0 and 1. The metric close to 1 means that the two are very similar.
