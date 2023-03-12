@@ -59,6 +59,8 @@ Once the linear layers are structured, we add a non-linear mapping on top of it 
 The output needs to be in the range of (0,1) i.e. it should have a probability distribution $α_{jt}=Softmax(e_{jt})$
  
 The $α_{jt}$ depicts our attention weights (the probability distribution) of all the pixel values in the feature vector. Once we have this value, we just need to take a weighted sum of the attention weights on our feature map ($h_j$).
+ 
+ This weighted sum produces the Context vector $C_i=\sum_{j=1}^T \alpha_{jt}
 
 
 
