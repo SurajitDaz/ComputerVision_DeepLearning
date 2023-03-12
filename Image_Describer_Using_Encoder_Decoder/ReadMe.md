@@ -45,7 +45,7 @@ For a particular word, more than one area in the context vector can help in pred
  
 When the RNN is generating a new word, the attention mechanism is focusing on the relevant part of the image, so the decoder only uses specific parts of the image.
  
-To $\sqrt{3x-1}+(1+x)^2$ an attention model, which is a kind of neural network, we pass in $ \ h_t \ $ (decoder's hidden state) and $ \ f_j \ $ (feature vector coming from the encoder). Therefore with this information, we can get how important is the $ \ j_{th} \ $ pixel of the input image at the $ \ t_{th} \ $ time stamp.
+To $\sqrt{3x-1}+(1+x)^2$ an attention model, which is a kind of neural network, we pass in $\ h_t \$ (decoder's hidden state) and $\ f_j \$ (feature vector coming from the encoder). Therefore with this information, we can get how important is the $\ j_{th} \$ pixel of the input image at the $\ t_{th} \$ time stamp.
 
 
 This is represented by the equation: $$e_{jt}=f_{att}(ht,fj)$$
