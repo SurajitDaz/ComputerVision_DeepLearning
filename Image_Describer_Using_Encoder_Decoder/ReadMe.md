@@ -69,3 +69,16 @@ The $α_{jt}$ depicts our attention weights (the probability distribution) of al
  
  This weighted sum produces the Context vector $C_i=\sum_{j=1}^T \alpha_{jt}$
 Ref: https://arxiv.org/pdf/1502.03044.pdf
+ 
+###	Pre-Processing, Model training and model evaluation:
+
+ The CNN-based encoder produces the feature vector which is the encoded representation of the input image. The resulting feature vector is static and does not change at each timestamp; therefore you pass this vector to the attention model along with the hidden state of the decoder to create the context vector. 
+
+ On the decoder front, you have the input sequence which is pre-processed and transformed such that all the samples have equal sequence length. This is then fed to the embedding layer present inside the decoder. The embedded layer transforms it into an embedded vector which is passed to a concatenation layer along with the context vector coming from the attention model. The output of the concatenation layer is fed as input to the GRU (the variant of the RNN considered here).
+
+ The GRU then produces an output along with the hidden state, which is fed to the RNN at the next timestep. The dense layer placed after the GRU does a linear transformation on the previous output and thus you get a list of probability values for all the words present in the vocabulary. The word with the highest probability is selected as the prediction for that timestep.
+ 
+![74751f7e-5e91-41df-9c1b-c5a3b76c9ea0-summary](https://user-images.githubusercontent.com/75905023/224539613-5564b9a3-92f7-4204-b9f7-726743c71460.png)
+
+ 
+ 
