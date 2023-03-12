@@ -48,8 +48,9 @@ When the RNN is generating a new word, the attention mechanism is focusing on th
 To an attention model, which is a kind of neural network, we pass in $h_t$ (decoder's hidden state) and $f_j$ (feature vector coming from the encoder). Therefore with this information, we can get how important is the $j^{th}$ pixel of the input image at the $t^{th}$ time stamp.
 
 
-This is represented by the equation: $e_{jt}=f_{att}(ht,fj)$
- ![pooling_attention](https://user-images.githubusercontent.com/75905023/224538656-a191e8db-46a2-4e35-aba1-6e95ee0205bd.gif)
+This is represented by the equation: $e_{jt}=f_{att}(ht,fj)$ 
+
+![pooling_attention](https://user-images.githubusercontent.com/75905023/224538656-a191e8db-46a2-4e35-aba1-6e95ee0205bd.gif) 
 
 
 The pixel values are represented by $e_j$ which changes wrt time
