@@ -41,7 +41,7 @@ In a primitive model, we assume that the spatial dimensions of the CNN image fea
 For a particular word, more than one area in the context vector can help in prediction. Hence, we take the weighted sum of all the areas and pass it to the decoder. The below image demonstrates the line “Attention Is All You Need”. 
 ![attention](https://user-images.githubusercontent.com/75905023/224535164-d7b39b1b-a2a4-44f2-a52e-49dfd12da32e.gif)
  
- A “classic” image captioning system would encode the image, using a pre-trained Convolutional Neural Network that would produce a feature vector. This feature vector would remain the same while decoding the caption using RNN. However, with an attention model, you get a varying feature vector based on the previously generated word. This helps you to look at different parts of the image for better captioning.
+ A “classic” image captioning system would encode the image, using a pre-trained Convolutional Neural Network that would produce a feature vector. This feature vector would remain the same while decoding the caption using RNN. However, with an attention model, we get a varying feature vector based on the previously generated word. This helps you to look at different parts of the image for better captioning.
  
 When the RNN is generating a new word, the attention mechanism is focusing on the relevant part of the image, so the decoder only uses specific parts of the image.
  
