@@ -48,7 +48,19 @@ When the RNN is generating a new word, the attention mechanism is focusing on th
 To an attention model, which is a kind of neural network, we pass in $h_t$ (decoder's hidden state) and $f_j$ (feature vector coming from the encoder). Therefore with this information, we can get how important is the $j^{th}$ pixel of the input image at the $t^{th}$ time stamp.
 
 
-This is represented by the equation: $$e_{jt}=f_{att}(ht,fj)$$
+This is represented by the equation: $e_{jt}=f_{att}(ht,fj)$
+
+The pixel values are represented by $e_j$ which changes wrt time
+ 
+The neural network in the attention model does a linear transformation of the input $h_j$ and $y_{t−1}$ i.e., $U_{att}∗h_t+W_{att}∗f_{j}$
+ 
+Once the linear layers are structured, you add a non-linear mapping on top of it using the tanh activation function.
+fatt=VTatt∗tanh(Uatt∗ht+Watt∗fj)
+ 
+The output needs to be in the range of (0,1) i.e. it should have a probability distribution.
+αjt=Softmax(ejt)
+ 
+The αjt depicts our attention weights (the probability distribution) of all the pixel values in the feature vector. Once you have this value, you just need to take a weighted sum of the attention weights on your feature map (hj).
 
 
 
