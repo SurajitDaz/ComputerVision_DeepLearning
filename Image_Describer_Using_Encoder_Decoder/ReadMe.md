@@ -81,4 +81,14 @@ Ref: https://arxiv.org/pdf/1502.03044.pdf
 ![74751f7e-5e91-41df-9c1b-c5a3b76c9ea0-summary](https://user-images.githubusercontent.com/75905023/224539613-5564b9a3-92f7-4204-b9f7-726743c71460.png)
 
  
+Now it is to be mentioned that Padding is a process that we apply at the start or the end of a sequence to make all the samples to have a common standard length. For text generation, the decoder needs to have an input at the start and it can't be a padded input.  Therefore, for our process, we will be doing the padding at the end.
+
+ 
+
+Once the padding is done, we need to apply 'masking'. Through masking we need to inform the model to ignore whenever a padded input is passed at a timestep, hinting that this part of the input is padded. Without masking, the model will consider the padded input at that timestep, which will contribute to an increased loss.
+
+ 
+
+In the next video, let's understand the whole process again and see how the evaluation process is different from training.
+
  
