@@ -68,6 +68,4 @@ The $α_{jt}$ depicts our attention weights (the probability distribution) of al
 
  
  This weighted sum produces the Context vector $C_i=\sum_{j=1}^T \alpha_{jt}$
-
-
-
+[ Reference:[ Show, Attend and Tel](https://arxiv.or](https://arxiv.org/pdf/1502.03044.pdf)
