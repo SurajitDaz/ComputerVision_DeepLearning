@@ -56,7 +56,7 @@ The neural network in the attention model does a linear transformation of the in
  
 Once the linear layers are structured, we add a non-linear mapping on top of it using the tanh activation function. $f_{att}=V^T_{att}∗tan h(U_{att}∗h_t+W_{att}∗f_j)$
  
-The output needs to be in the range of (0,1) i.e. it should have a probability distribution.$α_{jt}=Softmax(e_{jt})$
+The output needs to be in the range of (0,1) i.e. it should have a probability distribution $α_{jt}=Softmax(e_{jt})$
  
 The $α_{jt}$ depicts our attention weights (the probability distribution) of all the pixel values in the feature vector. Once you have this value, you just need to take a weighted sum of the attention weights on your feature map ($h_j$).
 
