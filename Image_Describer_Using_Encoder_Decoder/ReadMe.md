@@ -3,11 +3,11 @@
 A deep learning model which can explain the contents of an image in the form of speech through caption generation with an attention mechanism on Flickr8K dataset will be created. 
 
 ### Use Case: 
-The product is made as an accessary for the blind people so that they can understand any image with the help of speech. The caption generated through a CNN-RNN model will be converted to speech using a text to speech library. 
+The product is made as an accessary for the blind people so that they can understand any image with the help of speech. The caption generated through a CNN-RNN model will be converted to speech using a text to speech library.<br>
  
 
 # DataSet:  
-The dataset is taken from the [Kaggle website](https://www.kaggle.com/datasets/adityajn105/flickr8k) and it consists of sentence-based image descriptions having a list of 8,000 images that that is publicly available and contains 8,000 images depicting various scenarios and events. Each data point is properly labelled with five captions. One of the major benefits of working with this data set is that its size is small, which makes it easier for users to work on it on low-end PCs
+The dataset is taken from the [Kaggle website](https://www.kaggle.com/datasets/adityajn105/flickr8k) and it consists of sentence-based image descriptions having a list of 8,000 images that that is publicly available and contains 8,000 images depicting various scenarios and events. Each data point is properly labelled with five captions. One of the major benefits of working with this data set is that its size is small, which makes it easier for users to work on it on low-end PCs. <br>
  
 
 # Methodology:
@@ -32,4 +32,6 @@ Aa first, the image will be passed through the encoder, and the feature vector w
 So, to overcome this problem, instead of passing the complete image at each timestamp, we can only pass the necessary parts of the image that can help in the prediction of the image at every timestamp. Thus, the model will run faster and increase its prediction accuracy.
 
 This limitation can be solved with the help of an attention mechanism.
+ 
+ ### •	Attention model:
 
