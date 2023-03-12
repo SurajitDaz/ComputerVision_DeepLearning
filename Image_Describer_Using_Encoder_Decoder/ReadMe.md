@@ -38,7 +38,7 @@ This limitation can be solved with the help of an attention mechanism.
  
 In a primitive model, we assume that the spatial dimensions of the CNN image features were averaged together. Now, we describe a method to weight these spatial locations according to their perceived importance. This technique is referred to as an attention mechanism.
 
-For a particular word, more than one area in the context vector can help in prediction. Hence, we take the weighted sum of all the areas and pass it to the decoder.
+For a particular word, more than one area in the context vector can help in prediction. Hence, we take the weighted sum of all the areas and pass it to the decoder. The below image demonstrates the line “Attention Is All You Need”. 
 ![attention](https://user-images.githubusercontent.com/75905023/224535164-d7b39b1b-a2a4-44f2-a52e-49dfd12da32e.gif)
 
 
