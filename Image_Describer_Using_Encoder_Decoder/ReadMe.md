@@ -47,7 +47,7 @@ When the RNN is generating a new word, the attention mechanism is focusing on th
  
 $$ \text{To an attention model, which is a kind of neural network, we pass in} \ h_t \ \text{(decoder's hidden state) and} \ f_j \ \text{(feature vector coming from the encoder).  Therefore with this information, you can get how important is the jthpixel of the input image at the tth time stamp.}$$
 
- To an attention model, which is a kind of neural network, we pass in h<sub>t</sub> $$\text{(decoder's hidden state) and} \ f_j \ \text{(feature vector coming from the encoder).  Therefore with this information, you can get how important is the jthpixel of the input image at the tth time stamp.}$$
+ To an attention model, which is a kind of neural network, we pass in h<sub>t</sub> (decoder's hidden state) and f<sub>j</sub> (feature vector coming from the encoder).  Therefore with this information, you can get how important is the jthpixel of the input image at the tth time stamp.
 This is represented by the equation: $$e_{jt}=f_{att}(ht,fj)$$
 
 
