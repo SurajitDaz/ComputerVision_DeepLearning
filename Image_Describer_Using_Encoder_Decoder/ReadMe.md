@@ -45,7 +45,7 @@ For a particular word, more than one area in the context vector can help in pred
  
 When the RNN is generating a new word, the attention mechanism is focusing on the relevant part of the image, so the decoder only uses specific parts of the image.
  
-$$ \text{To an attention model, which is a kind of neural network, we pass in} \ h_t \ \text{(decoder's hidden state) and} \ f_j \ \text{(feature vector coming from the encoder).
+$$ \text{To an attention model, which is a kind of neural network, we pass in} \ h_t \ \text{(decoder's hidden state) and} \ f_j \ \text{(feature vector coming from the encoder).\\
 Therefore with this information, we can get how important is the} \ j_{th} \ \text{pixel of the input image at the} \ t_{th} \ \text{ time stamp.}$$
 
 
