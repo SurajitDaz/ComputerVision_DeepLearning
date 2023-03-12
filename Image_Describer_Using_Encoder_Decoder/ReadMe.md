@@ -49,6 +49,8 @@ To an attention model, which is a kind of neural network, we pass in $h_t$ (deco
 
 
 This is represented by the equation: $e_{jt}=f_{att}(ht,fj)$
+ ![pooling_attention](https://user-images.githubusercontent.com/75905023/224538656-a191e8db-46a2-4e35-aba1-6e95ee0205bd.gif)
+
 
 The pixel values are represented by $e_j$ which changes wrt time
  
@@ -59,8 +61,12 @@ Once the linear layers are structured, we add a non-linear mapping on top of it 
 The output needs to be in the range of (0,1) i.e. it should have a probability distribution $α_{jt}=Softmax(e_{jt})$
  
 The $α_{jt}$ depicts our attention weights (the probability distribution) of all the pixel values in the feature vector. Once we have this value, we just need to take a weighted sum of the attention weights on our feature map ($h_j$).
+![pool_attn-2](https://user-images.githubusercontent.com/75905023/224538634-9ecf9d33-987f-41b3-bfb9-e9a0748b0de2.png)
+
+![pool_attn_3](https://user-images.githubusercontent.com/75905023/224538607-5d6013bb-eb7c-4afb-bd2d-2b54c6499246.png)
+
  
- This weighted sum produces the Context vector $C_i=\sum_{j=1}^T \alpha_{jt}$
+ This weighted sum produces the Context vector $C_i=\Sum_{j=1}^T \alpha_{jt}$
 
 
 
