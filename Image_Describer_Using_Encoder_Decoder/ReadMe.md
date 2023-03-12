@@ -67,7 +67,7 @@ The $α_{jt}$ depicts our attention weights (the probability distribution) of al
 ![pool_attn_3](https://user-images.githubusercontent.com/75905023/224538607-5d6013bb-eb7c-4afb-bd2d-2b54c6499246.png)
 
  
- This weighted sum produces the Context vector $C_i=\Sum_{j=1}^T \alpha_{jt}$
+ This weighted sum produces the Context vector $C_i=\sum_{j=1}^T \alpha_{jt}$
 
 
 
