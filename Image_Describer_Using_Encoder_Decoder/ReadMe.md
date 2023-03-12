@@ -26,3 +26,10 @@ The image-to-caption generation part can be achieved with the help of encoder-de
 After the generation of the feature vector, we will focus on the decoder portion. The decoder portion is an RNN based model. The basic difference between CNN and RNN is feedback memory. A particular RNN layer is a function of the present input along with the previous input. So, in our project, the RNN layers will have two inputs, one is the feature vector and the other is the output of the previous layer.
  
 Aa first, the image will be passed through the encoder, and the feature vector will be generated. Then, the first RNN layer will have this feature vector and the <start> tag as the input and will generate the first word of the sequence. The next layer will have this predicted word and the feature vector as the input and will predict the second word. This series of events will continue until you find the <end> tag as the output. Words are predicted by finding the probabilities of the occurrence of the word in the dictionary.
+ 
+ Now, in traditional CNN-RNN based model is not the perfect model to extract the contents of an image. The model has a limitation because of which unnecessary information is passed through the model and the predictions can vary because of this limitation. So, one of the major limitations of the traditional methods is with the input of the image which ultimately is passed as the input to every RNN layer at every timestamp that can pass unnecessary information into the model and can, in turn, decrease the computational speed of the entire model. Owing to this limitation, the model suffers in predicting the word sequence correctly.
+
+So, to overcome this problem, instead of passing the complete image at each timestamp, we can only pass the necessary parts of the image that can help in the prediction of the image at every timestamp. Thus, the model will run faster and increase its prediction accuracy.
+
+This limitation can be solved with the help of an attention mechanism.
+
