@@ -1,5 +1,5 @@
 
-** Introduction: **
+**Introduction:** <br>
 One of the complicated tasks in medical imaging is to diagnose MRI(Magnetic Resonance Imaging). Sometimes to interpret the scan, the radiologist needs different variations of the imaging which can drastically enhance the accuracy of diagnosis by providing practitioners with a more comprehensive understanding.
  
  
@@ -9,7 +9,7 @@ In this capstone, we will use CycleGAN to translate the style of one MRI image t
 
 Problem statement: To build a Generative adversarial model(modified U-Net) which can generate artificial MRI images of different contrast levels from existing MRI scans.
 
-Project pipeline
+**Project pipeline**<br>
 The project pipeline can be briefly summarized in the following four steps:
 •	Data Understanding: Here, we need to load the data and create the dataset for it.
 •	Image Processing: In this step, we will have to process the images using different steps.
