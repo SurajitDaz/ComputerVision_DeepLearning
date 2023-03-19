@@ -1,3 +1,6 @@
+# Problem Statement:
+Generating handwritten number from noise using MNIST dataset.
+
 **Dataset:**<br>
 The inbuilt dataset in TensorFlow, which returns train_images and train_labels as the first tuple. The second tuple contains the test set, which is not here. Link: [TensorFlow official documentation ](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist/load_data)
 
