@@ -27,7 +27,10 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
 
   - After Implementation, let’s visualise the model we have built using the [plot_model function](https://www.tensorflow.org/api_docs/python/tf/keras/utils/plot_model). 
   - **Building Discriminator:** Custom Model built up with an out '0' or '1'.
-  - **Loss calculation for Discriminator:** Using [binary cross-entropy](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy) as a loss function, loss is calculated.
+  - **Loss calculation for Discriminator:** Using [binary cross-entropy](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy) as a loss function, loss is calculated. It involves two cases for loss computation, wherein one is associated with the real input image and the other is a fake input image produced by the generator
+  real_loss = cross_entropy(tf.ones_like(real_output), real_output)<br>
+  fake_loss = cross_entropy(tf.zeros_like(fake_output), fake_output)<br>
+  total_loss = real_loss + fake_loss
 * Model Training
 
 
