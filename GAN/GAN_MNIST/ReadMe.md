@@ -22,7 +22,7 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
 
  
 * Model Building
- - GAN is composed of two components - the generator and the discriminator. We can build a generator that uses deep convolution networks in the background. In order to build the generator conv 2d transpose (reverse CNN) layer has been used. It takes 1-dimensional input (i.e. noise) and progressively increases the height and width of the chanel. Also, here deep convolutional layers are used in upsampling the data. 
+  - GAN is composed of two components - the generator and the discriminator. We can build a generator that uses deep convolution networks in the background. In order to build the generator conv 2d transpose (reverse CNN) layer has been used. It takes 1-dimensional input (i.e. noise) and progressively increases the height and width of the chanel. Also, here deep convolutional layers are used in upsampling the data. 
 
 * Model Training
 
