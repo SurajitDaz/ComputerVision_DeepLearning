@@ -39,14 +39,14 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
   - Now the next remaining step in the training is to calculate and apply the gradients on the model using the loss we just calculated.
   - To calculate the gradients we just need to call the gradient tape functions, we initialised earlier. For example, we call the following method for the generator. [Reference](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Optimizer). gen_tape.gradient(gen_loss, generator.trainable_variables). After calculating the gradients we also need to apply the gradients on the optimizers to update the model’s weight and biases.  generator_optimizer.apply_gradients(zip(gradients_of_generator, generator.trainable_variables)) In the next video, you will understand that you just need to call the function that you created earlier to perform one batch of training. It provides us with better comprehension and easier code management. 
 
-We train our model for a certain number of epochs. For each epoch, we have several batches of images, which we pass through training flow one by one. Note that we are calling the train_step function we defined in the previous step.
+    We train our model for a certain number of epochs. For each epoch, we have several batches of images, which we pass through training flow one by one. Note that we are calling the train_step function we defined in the previous step.
 
 
-for epoch in range(1, EPOCHS+1):    
+    for epoch in range(1, EPOCHS+1):    
 
-   - for image_batch in train_dataset:
+       - for image_batch in train_dataset:
 
-       - train_step(image_batch)
+           - train_step(image_batch)
 
 
 * Generating a GIF of Generated Images
