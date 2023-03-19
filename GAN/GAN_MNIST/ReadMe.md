@@ -17,7 +17,10 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
 
 * Data Preprocessing
   - **Step-1 Image normalization:** We normalize the image pixels in range (-1, 1) using the following formula. Dividing raw pixel values of range (0, 255) by 127.5 will make it in the range (0, 2) and when we subtract 1 from all the values, we get (-1, 1).
-  - **Resizing Image:** Here, we first normalised the data between [-1, 1] for faster training, then , resized images to [32, 32] and added another dimension as an image channel using an inbuilt function in skimage library (https://scikit-image.org/docs/dev/api/skimage.transform.html#resize). 
+  - **Step-2 Resizing Image:** Here, we first normalised the data between [-1, 1] for faster training, then , resized images to [32, 32] and added another dimension as an image channel using an inbuilt function in skimage library (https://scikit-image.org/docs/dev/api/skimage.transform.html#resize). 
+  - **Step-2 Batch/Suffle** We batch and shuffle the dataset. Refer to [this](https://www.tensorflow.org/api_docs/python/tf/data/Dataset#batch) for batch and [this](https://www.tensorflow.org/api_docs/python/tf/data/Dataset#shuffle) for the shuffle.
+
+ 
 * Model Building
 
 * Model Training
