@@ -23,10 +23,11 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
  
 * Model Building
   - GAN is composed of two components - the generator and the discriminator. We can build a generator that uses deep convolution networks in the background. In order to build the generator conv 2d transpose (reverse CNN) layer has been used. It takes 1-dimensional input (i.e. noise) and progressively increases the height and width of the chanel. Also, here deep convolutional layers are used in upsampling the data. 
-  - We use the following inbuilt Keras layer to implement the [Transposed 2D Convolution](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2DTranspose). https://user-images.githubusercontent.com/75905023/226161317-8e3e1ce4-6544-4111-890f-40557aab9481.jpeg
-  - After Implementation, let’s visualise the model we have built using the [plot_model function](https://www.tensorflow.org/api_docs/python/tf/keras/utils/plot_model).  
+  - We use the following inbuilt Keras layer to implement the [Transposed 2D Convolution](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2DTranspose).  ![Trnsposed2D CNN Archite](https://user-images.githubusercontent.com/75905023/226161503-bd78a6f1-4e90-48da-993b-bfa9bfe6dd64.jpeg)
 
-* Model Training![Trnsposed2D CNN Archite]()
+  - After Implementation, let’s visualise the model we have built using the [plot_model function](https://www.tensorflow.org/api_docs/python/tf/keras/utils/plot_model). 
+
+* Model Training
 
 
 * Generating a GIF of Generated Images
