@@ -30,7 +30,9 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
   - **Loss calculation for Discriminator:** Using [binary cross-entropy](https://www.tensorflow.org/api_docs/python/tf/keras/losses/BinaryCrossentropy) as a loss function, loss is calculated. It involves two cases for loss computation, wherein one is associated with the real input image and the other is a fake input image produced by the generator
   real_loss = cross_entropy(tf.ones_like(real_output), real_output)<br>
   fake_loss = cross_entropy(tf.zeros_like(fake_output), fake_output)<br>
-  total_loss = real_loss + fake_loss
+  total_loss = real_loss + fake_loss<br>
+  The generator has only one situation where it needs to improve, which is when it fails to fool the discriminator. Since the generator calculates its loss from the discriminator, it also uses binary cross-entropy loss. cross_entropy(tf.ones_like(fake_output), fake_output)<b><br>
+  Now that we have calculated the losses, we need to ensure the initialisation of the optimisers for weight updation of the models. We will also initialise the checkpoints to save the weights of our models to use in the subsequent steps of training. We use [adam](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adam) optimizers for both the components of GAN. 
 * Model Training
 
 
