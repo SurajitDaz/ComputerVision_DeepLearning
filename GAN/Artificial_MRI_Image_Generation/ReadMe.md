@@ -10,9 +10,9 @@ In this capstone, we will use CycleGAN to translate the style of one MRI image t
 Problem statement: To build a Generative adversarial model(modified U-Net) which can generate artificial MRI images of different contrast levels from existing MRI scans.
 
 **Project pipeline**<br>
-The project pipeline can be briefly summarized in the following four steps:
-•	Data Understanding: Here, we need to load the data and create the dataset for it.
-•	Image Processing: In this step, we will have to process the images using different steps.
-•	Model-Building and Training: This is the final step at which we have to create our Generators and Discriminators using a modified U-Net architecture(similar to CycleGAN). We also have to define the loss function and training step for model training.
+The project pipeline can be briefly summarized in the following four steps:<br>
+•	Data Understanding: Here, we need to load the data and create the dataset for it.<br>
+•	Image Processing: In this step, we will have to process the images using different steps.<br>
+•	Model-Building and Training: This is the final step at which we have to create our Generators and Discriminators using a modified U-Net architecture(similar to CycleGAN). We also have to define the loss function and training step for model training.<br>
 
 
