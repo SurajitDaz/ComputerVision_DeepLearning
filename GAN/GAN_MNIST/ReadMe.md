@@ -1,6 +1,13 @@
 DCGAN implementation can be divided into six steps. They are as follows:<br>
 
-* Importing Libraries
+* Importing Libraries with the specific versions
+  - numpy - 1.19.2
+
+  _ tensorflow - 2.4.1
+
+  _ matplotlib - 3.3.2
+
+  _ skimage - 0.17.2
 
 * Data Loading and Visualisation
 
