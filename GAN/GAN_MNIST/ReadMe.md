@@ -1,4 +1,4 @@
-DCGAN implementation can be divided into six steps. They are as follows:<br>
+DCGAN implementation can be divided into six steps. They are as follows (Ref. manual for implementation https://www.tensorflow.org/tutorials/generative/dcgan):<br>
 
 * Importing Libraries with the specific versions
   - numpy - 1.19.2
