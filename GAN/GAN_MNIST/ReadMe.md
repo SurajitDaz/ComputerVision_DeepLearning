@@ -35,31 +35,18 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
 * Optimizing the Loss:<br>
   After calculating the losses, we need to ensure the initialisation of the optimisers for weight updation of the models. We will also initialise the checkpoints to save the weights of our models to use in the subsequent steps of training. We use [adam](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adam) optimizers for both the components of GAN. 
 * Model Training:<br>
-  A custom fucntion has been used to train the models for an estimated number of epochs. There are two major steps in training any deep learning model - the first one is calculating the loss and the second one is updating the weight and bias of the model using the optimizer. We initialise the [gradient tapes](https://www.tensorflow.org/api_docs/python/tf/GradientTape) for the generator and discriminator for auto calculation of gradients. It is accomplished by the following code using tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape
-  Now the next remaining step in the training is to calculate and apply the gradients on the model using the loss we just calculated.
-  To calculate the gradients we just need to call the gradient tape functions, we initialised earlier. For example, we call the following method for the generator. [Reference](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Optimizer)
-
-gen_tape.gradient(gen_loss, generator.trainable_variables)
- 
-
-After calculating the gradients we also need to apply the gradients on the optimizers to update the model’s weight and biases. 
-
-generator_optimizer.apply_gradients(zip(gradients_of_generator, generator.trainable_variables))
- 
-
-In the next video, you will understand that you just need to call the function that you created earlier to perform one batch of training. It provides us with better comprehension and easier code management.
-
- 
+  - A custom fucntion has been used to train the models for an estimated number of epochs. There are two major steps in training any deep learning model - the first one is calculating the loss and the second one is updating the weight and bias of the model using the optimizer. We initialise the [gradient tapes](https://www.tensorflow.org/api_docs/python/tf/GradientTape) for the generator and discriminator for auto calculation of gradients. It is accomplished by the following code using tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape
+  - Now the next remaining step in the training is to calculate and apply the gradients on the model using the loss we just calculated.
+  - To calculate the gradients we just need to call the gradient tape functions, we initialised earlier. For example, we call the following method for the generator. [Reference](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Optimizer). gen_tape.gradient(gen_loss, generator.trainable_variables). After calculating the gradients we also need to apply the gradients on the optimizers to update the model’s weight and biases.  generator_optimizer.apply_gradients(zip(gradients_of_generator, generator.trainable_variables)) In the next video, you will understand that you just need to call the function that you created earlier to perform one batch of training. It provides us with better comprehension and easier code management. 
 
 We train our model for a certain number of epochs. For each epoch, we have several batches of images, which we pass through training flow one by one. Note that we are calling the train_step function we defined in the previous step.
 
- 
 
 for epoch in range(1, EPOCHS+1):    
 
-    for image_batch in train_dataset:
+   - for image_batch in train_dataset:
 
-        train_step(image_batch)
+       - train_step(image_batch)
 
 
 * Generating a GIF of Generated Images
