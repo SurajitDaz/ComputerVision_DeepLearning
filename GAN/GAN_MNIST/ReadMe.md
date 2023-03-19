@@ -21,9 +21,9 @@ DCGAN implementation can be divided into six steps. They are as follows (Ref. ma
   - **Step-2 Batch/Suffle** We batch and shuffle the dataset. Refer to [this](https://www.tensorflow.org/api_docs/python/tf/data/Dataset#batch) for batch and [this](https://www.tensorflow.org/api_docs/python/tf/data/Dataset#shuffle) for the shuffle.
 
  
-* Model Building
+* Model Building:
   - GAN is composed of two components - the generator and the discriminator. We can build a generator that uses deep convolution networks in the background. In order to build the generator conv 2d transpose (reverse CNN) layer has been used. It takes 1-dimensional input (i.e. noise) and progressively increases the height and width of the chanel. Also, here deep convolutional layers are used in upsampling the data. 
-  - We use the following inbuilt Keras layer to implement the [Transposed 2D Convolution](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2DTranspose).  There prototype of the Trnasposed 2D CNN looks like below: ![Trnsposed2D CNN Archite](https://user-images.githubusercontent.com/75905023/226161503-bd78a6f1-4e90-48da-993b-bfa9bfe6dd64.jpeg)
+  - **Building:** We use the following inbuilt Keras layer to implement the [Transposed 2D Convolution](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2DTranspose).  There prototype of the Trnasposed 2D CNN looks like below: ![Trnsposed2D CNN Archite](https://user-images.githubusercontent.com/75905023/226161503-bd78a6f1-4e90-48da-993b-bfa9bfe6dd64.jpeg)
 
   - After Implementation, let’s visualise the model we have built using the [plot_model function](https://www.tensorflow.org/api_docs/python/tf/keras/utils/plot_model). 
 
